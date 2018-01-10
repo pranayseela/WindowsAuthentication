@@ -12,7 +12,13 @@ namespace TEER_WindowsAuthentication.Controllers
         {
             return View();
         }
-
+        public ActionResult Logout()
+        {
+            Response.ClearContent();
+            Response.StatusCode = 401;
+            Response.End();
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
